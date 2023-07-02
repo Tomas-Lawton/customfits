@@ -16,6 +16,13 @@ body {
   border-width: 0;
 }
 
+/* Highlight color */
+
+::selection {
+  background: #3000ee;
+  color: white;
+}
+
 .text-primary {
   color: #3000ee;
 }
