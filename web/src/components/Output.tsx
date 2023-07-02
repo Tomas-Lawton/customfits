@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from "react";
 
-interface InterfaceProps {
-  clickCallback: () => void;
-}
+const Output: React.FC = () => {
+  // const [isOpen, setIsOpen] = useState(false);
 
-const Output: React.FC<InterfaceProps> = ({ clickCallback }) => {
-  // Animate on click
-  // const [selectedId, setSelectedId] = useState(null)
+  // useEffect(() => {
+  //   const handleKeyDown = (event: any) => {
+  //     if (event.key === "Escape") {
+  //       setIsOpen(false);
+  //       console.log("Escape key pressed");
+  //     }
+  //   };
 
-  // {items.map(item => (
-  //   <motion.div layoutId={item.id} onClick={() => setSelectedId(item.id)}>
-  //     <motion.h5>{item.subtitle}</motion.h5>
-  //     <motion.h2>{item.title}</motion.h2>
-  //   </motion.div>
-  // ))}
+  //   document.addEventListener("keydown", handleKeyDown);
 
-  // <AnimatePresence>
-  //   {selectedId && (
-  //     <motion.div layoutId={selectedId}>
-  //       <motion.h5>{item.subtitle}</motion.h5>
-  //       <motion.h2>{item.title}</motion.h2>
-  //       <motion.button onClick={() => setSelectedId(null)} />
-  //     </motion.div>
-  //   )}
-  // </AnimatePresence>
+  //   return () => {
+  //     document.removeEventListener("keydown", handleKeyDown);
+  //   };
+  // }, []);
+
+  // const handleOnClick = () => {
+  //   console.log("clicked");
+  //   setIsOpen(true);
+  // };
 
   return (
-    <div onClick={clickCallback} className="m-40 rounded-lg">
+    <div className="m-40 rounded-lg">
       <img className="w-full" alt="" src="/services.svg" />
     </div>
   );

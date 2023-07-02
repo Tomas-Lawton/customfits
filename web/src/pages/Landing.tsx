@@ -9,38 +9,16 @@ import Footer from "../components/Footer";
 import CustomModal from "../components/CustomModal";
 
 const Landing: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  useEffect(() => {
-    const handleKeyDown = (event: any) => {
-      if (event.key === "Escape") {
-        setIsOpen(false);
-        console.log("Escape key pressed");
-      }
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
-  const handleOnClick = () => {
-    console.log("clicked");
-    setIsOpen(true);
-  };
-
   return (
     <section className="block font-open-sans">
-      {/* <Nav /> */}
       <Hero />
+      <Nav />
       <Examples />
       {/* Refactor for dispatch */}
-      <Output clickCallback={handleOnClick} />
+      <Output />
       <Popular />
       <Services />
-      {/* <Footer /> */}
+      <Footer />
       <CustomModal />
     </section>
   );
