@@ -1,7 +1,8 @@
 import React from "react";
 import Search from "../custom/Search";
-import { PlusOutlined } from "@ant-design/icons";
+import { EditOutlined } from "@ant-design/icons";
 import Cart from "./Cart";
+import { Button } from "antd";
 
 const Nav: React.FC = () => {
   return (
@@ -11,9 +12,12 @@ const Nav: React.FC = () => {
           BYTEWARE
         </h3>
         <Search />
-        <div className="flex items-center justify-center bg-primary w-10 h-10 text-white rounded-md">
-          <PlusOutlined />
-        </div>
+        <Button
+          className="flex items-center justify-center bg-primary h-10 text-white hover:text-white  rounded-md"
+          icon={<EditOutlined />}
+        >
+          Edit
+        </Button>
       </div>
 
       <div className="flex items-center">

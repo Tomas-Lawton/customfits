@@ -10,7 +10,7 @@ const Search: React.FC = () => {
       size="large"
       enterButton="Generate"
       // loading
-      className="pr-2"
+      className="duration-500	hover:shadow-xl"
       style={{ width: 600 }}
     />
   );
