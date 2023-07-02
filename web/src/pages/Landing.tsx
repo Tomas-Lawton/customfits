@@ -13,10 +13,11 @@ const Landing: React.FC = () => {
     <section className="block font-open-sans">
       <Hero />
       <Nav />
-      <Examples />
       {/* Refactor for dispatch */}
       <Output />
-      <Popular />
+
+      <Examples />
+      {/* <Popular /> */}
       <Services />
       <Footer />
       <CustomModal />

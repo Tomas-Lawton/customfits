@@ -42,14 +42,13 @@ const AnimatedHook: React.FC<InterfaceProps> = ({ text }) => {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="text-center text-[70px] text-primary font-montserrat"
+      className="text-center text-6xl	text-primary font-montserrat"
     >
       {words.map((word, index) => (
         <motion.span
           variants={child}
-          style={{ marginRight: "15px" }}
           key={index}
-          className={`${
+          className={`mr-4 ${
             word !== "fashion"
               ? "font-medium text-black"
               : "font-bold font-times"

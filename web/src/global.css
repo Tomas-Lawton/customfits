@@ -34,3 +34,10 @@ body {
 .bg-primary {
   background-color: #3000ee;
 }
+
+.custom-graphic {
+  position: absolute;
+  left: 0;
+  margin-left: -12%;
+  top: calc(35vh);
+}

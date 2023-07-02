@@ -7,6 +7,8 @@ import {
 import Landing from "./pages/Landing";
 import React, { useEffect } from "react";
 import { ConfigProvider } from "antd";
+import store from "./model/store";
+import { Provider } from "react-redux";
 
 function App() {
   const action = useNavigationType();
@@ -53,9 +55,11 @@ function App() {
         },
       }}
     >
-      <Routes>
-        <Route path="/" element={<Landing />} />
-      </Routes>
+      <Provider store={store}>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+        </Routes>
+      </Provider>
     </ConfigProvider>
   );
 }

@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import CustomButton from "../custom/CustomButton";
 import { Modal, Carousel } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+import { useSelector, useDispatch } from "react-redux";
+import { ActionTypes } from "../model/types";
+
+import type { RootState } from "../model/store";
 
 const examples = [
   {
@@ -19,17 +23,14 @@ const examples = [
 ];
 
 const CustomModal: React.FC = () => {
-  // refactor to dispatch
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const isOpen = useSelector((state: RootState) => state.modal.isOpen);
+  const dispatch = useDispatch();
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
   const handleOk = () => {
-    setIsModalOpen(false);
+    dispatch({ type: ActionTypes.CLOSE_MODAL });
   };
   const handleCancel = () => {
-    setIsModalOpen(false);
+    dispatch({ type: ActionTypes.CLOSE_MODAL });
   };
 
   return (
@@ -37,7 +38,7 @@ const CustomModal: React.FC = () => {
       footer={null}
       title={null}
       width={1000}
-      open={isModalOpen}
+      open={isOpen}
       onOk={handleOk}
       onCancel={handleCancel}
     >

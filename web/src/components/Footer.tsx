@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
       <div>
         <div className="font-montserrat font-normal pr-5 mb-5">BYTEWEAR</div>
         <div className="text-sm w-1/2">
-          Unleash your inner fashion designer with custom Bytewear aperal and
-          GenAI art prints
+          Unleash your inner fashion designer with Bytewear fits and GenAI
+          prints.
         </div>
         <div className="flex">
           <div className="p-2 my-2 mr-2 rounded-md bg-color-50 flex">
