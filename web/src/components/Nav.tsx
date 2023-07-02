@@ -1,6 +1,7 @@
 import React from "react";
 import Search from "../custom/Search";
-import { PlusOutlined, ShoppingCartOutlined } from "@ant-design/icons";
+import { PlusOutlined } from "@ant-design/icons";
+import Cart from "./Cart";
 
 const Nav: React.FC = () => {
   return (
@@ -16,9 +17,7 @@ const Nav: React.FC = () => {
       </div>
 
       <div className="flex items-center">
-        <div className="flex items-center justify-center bg-primary w-10 h-10 text-white rounded-md">
-          <ShoppingCartOutlined />
-        </div>
+        <Cart />
       </div>
     </div>
   );

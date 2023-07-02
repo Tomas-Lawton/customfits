@@ -1,16 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomButton from "../custom/CustomButton";
-import { Carousel } from "antd";
+import { Modal, Carousel } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 
-const Modal: React.FC = () => {
-  return (
-    <section className="sticky top-0 w-full min-h-screen overflow-hidden">
-      <div className="bg-black/40 blur-3xl w-full min-h-screen"></div>
+const examples = [
+  {
+    path: "/examples/0.png",
+  },
+  {
+    path: "/examples/0.png",
+  },
+  {
+    path: "/examples/0.png",
+  },
+  {
+    path: "/examples/0.png",
+  },
+];
 
-      <div className="absolute top-0 bg-white flex flex-row mx-40 my-20 h-2/3 rounded-lg py-10">
-        <section className="basis-1/5 mx-10">
-          <h3 className="text-secondary font-montserrat font-normal">
+const CustomModal: React.FC = () => {
+  // refactor to dispatch
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  return (
+    <Modal
+      footer={null}
+      title={null}
+      width={1000}
+      open={isModalOpen}
+      onOk={handleOk}
+      onCancel={handleCancel}
+    >
+      <div className="bg-white flex flex-row mx-6 my-12 h-96">
+        <section className="basis-1/5">
+          <h3 className="text-secondary font-montserrat font-normal m-0">
             BYTEWARE
           </h3>
           <h2>Hoodie Oversized</h2>
@@ -33,24 +66,15 @@ const Modal: React.FC = () => {
 
           <div className="w-10/12 bg-black/20 overflow-hidden">
             <Carousel className="w-96 overflow-hidden">
-              <div>
-                <h3>1</h3>
-              </div>
-              <div>
-                <h3>2</h3>
-              </div>
-              <div>
-                <h3>3</h3>
-              </div>
-              <div>
-                <h3>4</h3>
-              </div>
+              {examples.map((img, index) => (
+                <img key={index} src={img.path}></img>
+              ))}
             </Carousel>
           </div>
         </section>
         <section className="basis-1/5 mx-10">
           <div className="inline-flex items-center justify-center w-full">
-            <p className="font-bold mr-2">Options</p>
+            <p className="font-bold mr-2 my-0">Options</p>
             <hr className="w-full bg-black h-0.5 border-0" />
           </div>
 
@@ -64,8 +88,8 @@ const Modal: React.FC = () => {
           <p className="text-secondary">Your fit</p>
         </section>
       </div>
-    </section>
+    </Modal>
   );
 };
 
-export default Modal;
+export default CustomModal;
