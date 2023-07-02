@@ -18,7 +18,7 @@ const imgs = [
 
 const Hero: React.FC = () => {
   return (
-    <div className="min-w-screen min-h-screen relative [background:linear-gradient(-67.88deg,_#e4e4e2,_#f6f6f6)]">
+    <div className="min-w-screen min-h-screen [background:linear-gradient(-67.88deg,_#e4e4e2,_#f6f6f6)]">
       <div className="flex mx-20 py-10">
         <h3 className="font-montserrat font-normal text-black pr-5 mr-auto">
           BYTEWARE

@@ -5,7 +5,7 @@ import Cart from "./Cart";
 
 const Nav: React.FC = () => {
   return (
-    <div className="sticky top-0 px-20 flex z-10 justify-between content-center [background:linear-gradient(-67.88deg,_#e4e4e2,_#f6f6f6)]">
+    <div className="sticky top-0 px-20 flex z-10 justify-between content-center [background:linear-gradient(-67.88deg,_#e4e4e2,_#f6f6f6)] shadow-md">
       <div className="flex items-center">
         <h3 className="font-montserrat font-normal text-black pr-5">
           BYTEWARE
