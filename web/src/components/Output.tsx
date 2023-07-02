@@ -5,30 +5,7 @@ import { ActionTypes } from "../model/types";
 const Output: React.FC = () => {
   const dispatch = useDispatch();
 
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   const handleKeyDown = (event: any) => {
-  //     if (event.key === "Escape") {
-  //       setIsOpen(false);
-  //       console.log("Escape key pressed");
-  //     }
-  //   };
-
-  //   document.addEventListener("keydown", handleKeyDown);
-
-  //   return () => {
-  //     document.removeEventListener("keydown", handleKeyDown);
-  //   };
-  // }, []);
-
-  // const handleOnClick = () => {
-  //   console.log("clicked");
-  //   setIsOpen(true);
-  // };
-
   const handleOnClick = () => {
-    console.log("test");
     dispatch({ type: ActionTypes.OPEN_MODAL });
   };
 
