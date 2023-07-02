@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Times:ital,wght@1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.text-primary {
+  color: #3000ee;
+}
+
+.text-secondary {
+  color: #898989;
+}
+
+.bg-primary {
+  background-color: #3000ee;
+}
