@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
     <div className="min-w-screen min-h-screen [background:linear-gradient(-67.88deg,_#e4e4e2,_#f6f6f6)]">
       <div className="flex mx-20 py-10">
         <h3 className="flex flex-1 justify-start font-montserrat font-normal text-black pr-5 mr-auto">
-          BYTEWARE
+          STABLEFITS
         </h3>
 
         <div className="flex flex-1 justify-center">
@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <hr className="w-full bg-black h-0.5 border-0 m-0 p-0" />
+      {/* <hr className="w-full bg-black h-0.5 border-0 m-0 p-0" /> */}
 
       <div>
         <motion.img

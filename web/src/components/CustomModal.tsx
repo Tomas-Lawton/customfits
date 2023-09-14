@@ -45,7 +45,7 @@ const CustomModal: React.FC = () => {
       <div className="bg-white flex flex-row mx-6 my-12 h-96">
         <section className="basis-1/5">
           <h3 className="text-secondary font-montserrat font-normal m-0">
-            BYTEWARE
+            STABLEFITS
           </h3>
           <h2>Hoodie Oversized</h2>
           <p className="font-bold">Sping 6251</p>

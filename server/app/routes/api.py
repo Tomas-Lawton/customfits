@@ -3,6 +3,8 @@ from controllers.image.image_processor import ImageProcessesing
 from controllers.image.image_utils import resize_image, stretch_image, insert_image_into_mockup
 from controllers.checkout import Checkout
 from typing import List
+import os
+
 
 router = APIRouter()
 
@@ -18,7 +20,7 @@ def generate_image(prompt: str):
 def generate_image(prompt: str):
     image_generator = ImageProcessesing()
     image = image_generator.generate_image(prompt)
-    return {"image_url": image.url}
+    # return {"image_url": image.url}
 
 @router.post("/insert_image_into_mockup")
 def insert_image_into_mockup(image_url: str, mockup_url: str):
@@ -26,6 +28,9 @@ def insert_image_into_mockup(image_url: str, mockup_url: str):
     # Use image_utils functions to resize, stretch, and insert image
     return {"mockup_url": mockup_url}
 
+
+
+# TODO     # Need code for a rendering engine
 @router.post("/enhance_resolution")
 def enhance_resolution(image_url: str):
     image_resolution_enhancer = ImageProcessesing()
@@ -37,3 +42,4 @@ def checkout(items: List[str]):
     checkout = Checkout()
     checkout.process_checkout(items)
     return {"message": "Checkout successful"}
+

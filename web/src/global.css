@@ -6,42 +6,44 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 *,
 ::before,
 ::after {
-  border-width: 0;
+    border-width: 0;
 }
+
 
 /* Highlight color */
 
 ::selection {
-  background: #3000ee;
-  color: white;
+    background: #3000ee;
+    color: white;
 }
 
 .text-primary {
-  color: #3000ee;
+    color: #3000ee;
 }
 
 .text-secondary {
-  color: #898989;
+    color: #898989;
 }
 
 .bg-primary {
-  background-color: #3000ee;
+    background-color: #3000ee;
 }
+
 
 /* .bg-primary-hover {
   background-color: #005fee;
 } */
 
 .custom-graphic {
-  position: absolute;
-  left: 0;
-  margin-left: -12%;
-  top: calc(35vh);
+    position: absolute;
+    left: 0;
+    margin-left: -12%;
+    top: calc(35vh);
 }
